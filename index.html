@@ -19,7 +19,7 @@
     .full-page-image {
       width: 100%;
       opacity: 0; /* 初始状态设为透明 */
-      transition: opacity 1s ease-in-out; /* 平滑渐入渐出过渡效果 */
+      animation: fadeInOut 5s infinite ease-in-out; /* 平滑渐入渐出过渡效果 */
     }
 
     .button-icon {
@@ -29,6 +29,8 @@
       transform: translateX(-50%);
       cursor: pointer; /* 鼠标悬停时显示为指示链接的光标 */
       transition: transform 0.3s ease; /* 添加按钮的平滑过渡效果 */
+      opacity: 0; /* 初始状态设为透明 */
+      animation: fadeInOut 5s infinite ease-in-out; /* 平滑渐入渐出过渡效果 */
     }
 
     .option-box {
@@ -39,22 +41,17 @@
       text-align: center;
       cursor: pointer;
       opacity: 0; /* 初始状态设为透明 */
-      transition: opacity 0.5s ease; /* 平滑渐入渐出过渡效果 */
+      animation: fadeInOut 5s infinite ease-in-out; /* 平滑渐入渐出过渡效果 */
     }
 
     .option-box:hover {
       background-color: #ddd; /* 鼠标悬停时的背景颜色变化 */
     }
 
-    /* 图片和选项的淡入动画效果 */
-    @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-
-    .fade-in-animation {
-      animation: fadeIn 1s ease-in-out;
-      animation-delay: 0.5s;
+    /* 图片、按钮图标和选项框的淡入淡出动画效果 */
+    @keyframes fadeInOut {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
     }
 
     /* 添加按钮图标的放大缩小动画 */
@@ -77,14 +74,15 @@
 </head>
 <body>
   <div class="container">
-    <img src="yinru.png" class="full-page-image fade-in-animation">
+    <img src="yinru.png" class="full-page-image">
     <h1>雪虎指南</h1>
     <div class="options-container">
-      <div class="option-box fade-in-animation" onclick="navigateToPage('introduction.html')">雪虎介绍</div>
-      <div class="option-box fade-in-animation" onclick="navigateToPage('endangered-info.html')">雪虎濒危信息</div>
-      <div class="option-box fade-in-animation" onclick="navigateToPage('learn-more.html')">了解更多</div>
+      <div class="option-box" onclick="navigateToPage('introduction.html')">雪虎介绍</div>
+      <div class="option-box" onclick="navigateToPage('endangered-info.html')">雪虎濒危信息</div>
+      <div class="option-box" onclick="navigateToPage('learn-more.html')">了解更多</div>
     </div>
     <img src="anniu.png" class="button-icon pulse-animation" onclick="navigateToPage('new_page.html')">
   </div>
 </body>
 </html>
+
