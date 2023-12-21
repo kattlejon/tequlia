@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>雪虎介绍</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    main {
+      display: flex;
+    }
+    
+    #content {
+      flex-grow: 1;
+      margin: 50px;
+    }
+    
+    #sidebar {
+      flex-shrink: 0;
+      width: 300px;
+      margin-right: 50px;
+    }
+    
+    .image-container {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>雪虎的奥秘</h1>
+  </header>
+  
+  <main>
+    <div id="content">
+      <h2>雪虎概述</h2>
+      <p>雪虎，是白虎基因进一步变异的结果（其概率只有10万分之1），是一种生活在高山地区的大型猫科动物。它们具有秀美的外貌和浓密的毛发，适应寒冷环境，并且在狩猎中展现出卓越的能力。</p>
+      <div class="image-container">
+        <img src="images/xuehuu.jpg" alt="雪虎图片1">
+      </div>
+      
+      <h2>栖息地</h2>
+      <p>雪虎主要分布在亚洲的高山地区，如喜马拉雅山脉和西伯利亚地区。它们通常栖息在密林、岩石和高山草原等地方。</p>
+      <div class="image-container">
+        <img src="images/habitat.jpg" alt="雪虎图片2">
+      </div>
+      
+      <h2>保护现状</h2>
+      <p>由于生境丧失和非法猎杀等因素影响，雪虎被国际自然保护联盟（IUCN）列为濒危物种。各国和保护组织致力于保护雪虎及其生态环境，以确保其存续。</p>
+      <div class="image-container">
+        <img src="images/present.jpg" alt="雪虎图片3">
+      </div>
+    </div>
+    
+    <div id="sidebar">
+      <h2>相关链接</h2>
+      <ul>
+        <li><a href="#">雪虎图片集</a></li>
+        <li><a href="#">雪虎保护组织</a></li>
+        <li><a href="#">雪虎视频</a></li>
+      </ul>
+    </div>
+  </main>
+</body>
+</html>
